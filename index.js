@@ -1,1 +1,3 @@
-console.log('Hello, World');
+function pulalinha() {
+    document.write('<br>')
+}

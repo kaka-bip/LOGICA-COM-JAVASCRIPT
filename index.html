@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot.css">
+    <link rel="shortcut icon" href="assets/Creative.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>KZQ</title>
 </head>
 <body>
-    <h1>Meu primeiro teste!</h1>
-    <h3>Seria isso um programa?</h3>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <strong>Não</strong> <p>consigo fazer nada além de mostrar conteúdo fixo?</p>
+      <img src="assets/Creative.jpeg" alt="" class="favicoon">
 
-    <p>Conhaça o site da nossa editora: </p>
-    <br>
-    <p>para arrendondá um numero utiliza o math.round</p>
-    <a href="http://www.casadocodigo.com.br" target="_blank">Clique aqui !</a>
-    <br>
-    <script src="index.js"></script>
+      <button class="btn btn-primary me-2" onclick="clica()" id="button">Saiba Mais</button>
+      
+      <div class="mx-auto">
+        <ul class="navbar-nav flex-row gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Suporte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Serviço</a>
+          </li>
+        </ul>
+      </div> 
+    <div class="d-flex align-items-center" id="icon">
+        <i class="fa-solid fa-user fa-2x"></i>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <div class="carrossel">
+      <h1 class="text-center">Hello World</h1>
+      </div>
+      <div class="imgcarrossel">
+      <img src="assets/fundocubo.jpeg" alt="" class="fundo">
+    </div>
+  </div>
+</main>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </body>
-</html>.
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade</title>
+</head>
+<body>
+    <h1>verificador de idade</h1>
+    <div>
+        <p>Ano de nascimento
+            <input type="number" name="idade" id="idade">
+        </p>
+
+        <p>Sexo
+            <input type="radio" name="radsex" id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+        </p>
+
+        <p>
+            <input type="button" value="verificar" onclick="ver()">
+        </p>
+    </div>
+
+    <div id="res">
+        Preencha os Dados acima!!
+    </div>
+    <script>
+        function ver(){
+            //variaveis
+            let data = new Date();
+            let ano = data.getFullYear();
+            let fano = document.getElementById('idade').value
+            let res = document.getElementById('res');
+            let img = document.createElement('img');
+            img.setAttribute('id', 'foto')
+            //alerta de [ERRO]
+            if (fano.lenght == 0 || Number(fano) > ano){
+                alert('[ERRO] Verifique novamente');
+            }else {
+                let fsex = document.getElementsByName('radsex');
+                let idade = ano - Number(fano);
+                let genero = ''
+                //homem
+                if (fsex[0].checked){
+                    genero = 'Homem'
+                    if (idade >= 0 && idade <10){
+                        //criança
+                        img.setAttribute('src', 'baby.jpg')
+                    }else if (idade <21){
+                        //jovem
+                        img.setAttribute('src', 'jovem.jpg')
+                    }else if (idade <50){
+                        ///adulto
+                        img.setAttribute('src', 'idoso.jpg')
+                    }else{
+                        //idoso
+                    }
+                    res.innerHTML = `Você e um ${genero} com ${idade} anos`
+                    res.appendChild(img);
+                    res.style.textAlign  = 'center'
+                    img.style.width = '400px'
+                    //mulher
+                }else if (fsex[1].checked){
+                    genero = 'Mulher'
+                    if (idade >= 0 && idade <10){
+                        //criança
+                        img.setAttribute('src', 'baby.jpg')
+                    }else if (idade <21){
+                        //jovem
+                        img.setAttribute('src', 'jovemm.jpg')
+                    }else if (idade <50){
+                        ///adulto
+                        img.setAttribute('src', 'mulher.jpg')
+                    }else{
+                        //idoso
+                        img.setAttribute('src', 'idosa.jpg')
+                    }
+                    res.innerHTML = `Você e uma ${genero} com ${idade} anos`;
+                    res.appendChild(img);
+                    res.style.textAlign = 'center'
+                    img.style.width = '400px'
+                }
+            }
+        }
+    </script>
+    <!--img.style.width = "200px";-->
+</body>
+</html>
